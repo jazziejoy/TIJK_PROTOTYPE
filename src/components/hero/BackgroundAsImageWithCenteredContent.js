@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-
+import { ConnectButton } from "web3uikit";
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -18,7 +18,7 @@ const StyledHeader = styled(Header)`
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative h-screen -mx-8 -mt-8 bg-center bg-cover min-h-144`}
-  background-image: url("http://localhost:8080/ipfs/QmSwTnbNk17yo9Q4VVMzrFDQ9174TBRSeZtPxcHK16x622?filename=bg-masterhead.png");
+  background-image: url("https://i.ibb.co/hYRdxxM/bg-masterhead.png");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-25`;
@@ -33,7 +33,7 @@ const Heading = styled.h1`
   }
 `;
 
-const PrimaryAction = tw.button`rounded-l-lg rounded-r-lg px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-gray-100 font-bold shadow transition duration-300 bg-blue-600 text-gray-100 hocus:bg-green-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
+const PrimaryAction = tw.button`rounded-l-lg rounded-r-lg px-8 py-1 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-3 bg-gray-100 font-bold shadow transition duration-300 bg-blue-600 text-gray-100 hocus:bg-green-700 hocus:text-gray-200 focus:outline-none focus:shadow-outline`;
 
 export const navLinks = styled.div`
   display: flex;
@@ -68,18 +68,20 @@ export default () => {
         <Content>
         <p>
         <img
-  src="http://localhost:8080/ipfs/QmbV2CNzp2owXuEFUPxk1D62cQYTwuz8gCYv9j6kG9U1xP?filename=ticjk_sm_logo.png"
-  class="p-1 bg-white border rounded max-w-sm" alt="logo"/>
-</p>
+          src="https://i.ibb.co/F5KbXf0/ticjk-sm-logo.png"
+          class="p-1 bg-white border rounded max-w-sm" alt="logo"/>
+        </p>
           <Heading>
           TIJK FINANCE
           </Heading>
           <p class="text-xxl text-white">
           A SYSTEMATIC INVESTMENT PLAN (SIP) THAT MAKES DECENTRALIZED FINANCE EASY...<br></br>
-<center>BECAUSE LIFE’S COMPLICATED ENOUGH</center>
-</p>
-          <PrimaryAction>CONNECT YOUR WALLET</PrimaryAction> 
-          
+            <center>BECAUSE LIFE’S COMPLICATED ENOUGH</center>
+          </p><br></br>
+
+          <div className="lrContainers">
+          <ConnectButton />
+        </div>
         </Content>
       </HeroContainer>
     </Container>
